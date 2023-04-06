@@ -6,10 +6,10 @@ public class Test03 {
 		// TODO Auto-generated method stub
 		int year = 2023;
 
-		int[] result = new int[10];
+		int[] result = new int[40];
 		int idx = 0;
 
-		while (idx < 10) {
+		while (idx < 40) {
 
 			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
 //			idx++;
