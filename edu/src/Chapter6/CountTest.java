@@ -21,7 +21,7 @@ public class CountTest { //file이름은 countTest이다. 여기서 사용할 cl
 	}
 
 	public static void main(String[] args) { //main이 있는 class의 이름이 file의 이름.중요중요중중요
-		Count.show(); // 이렇게 선언해야 사용가능 : 그냥 show라고 선언하면 객체가 없기에 위의 class에서 static이라고 선언을 해야함.
+//		Count.show(); // 이렇게 선언해야 사용가능 : 그냥 show라고 선언하면 객체가 없기에 위의 class에서 static이라고 선언을 해야함.
 		int num = 0;
 		Count.totalCount = 10;//public, static이라서 사용가능.만약 public을 private라고 바꾸면 totalCount또한 사용 불가.public을 지워도 동작 가능함(default선언으로 인해 정의된 file내에서는 사용 가능).
 //		Count.num = 20;//private에서 선언한였기에 사용불가.

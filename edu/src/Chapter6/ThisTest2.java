@@ -4,7 +4,7 @@ public class ThisTest2 {
 	private String name;
 
 	public void setName(String name) {
-		name = name;
+		this.name = name;
 	}
 
 	public String getName() {
