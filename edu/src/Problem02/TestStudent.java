@@ -45,13 +45,13 @@ public class TestStudent {
 
 		int[] a = new int[5];
 		Student arry[] = new Student[5];
-		Student.showNumberObjects();
+		Student.showNumberObjects();//현재 만들어진 객체수를 출력
 		arry[0] = new Student();
 		arry[1] = new Student(202301);
 		arry[2] = new Student(202302, "Hong");
 		arry[3] = new Student(202303, "Lee", "Busan");
 		arry[4] = new Student(202304, "Na", "jeju");
-		Student.showNumberObjects();
+		Student.showNumberObjects();//생성 후 객체수를 출력
 
 		for (int i = 0; i < 5; i++) {
 			arry[i].showStudent();// 생성된 객체 모두를 출력한다.
