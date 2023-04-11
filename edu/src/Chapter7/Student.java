@@ -2,6 +2,11 @@ package Chapter7;
 
 public class Student extends Person {
 	private String major;
+	
+	public Student(String name, int age, String major) {
+		super(name, age);
+		this.major = major;
+	}
 
 	public String getMajor() {
 		return major;
@@ -12,6 +17,6 @@ public class Student extends Person {
 	}
 	
 	public String toString() {
-		return "Employee [name =" + getName() +", age = " + getAge() + ", major = " + getMajor() + "]";
+		return "Student [name =" + getName() +", age = " + getAge() + ", major = " + getMajor() + "]";
 	}
 }

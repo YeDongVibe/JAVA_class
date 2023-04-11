@@ -3,6 +3,11 @@ package Chapter7;
 public class Professor extends Person {
 	private String subject;
 
+	public Professor(String name, int age, String subject) {
+		super(name, age);
+		this.subject = subject;
+	}
+
 	public String getSubject() {
 		return subject;
 	}
@@ -11,7 +16,7 @@ public class Professor extends Person {
 		this.subject = subject;
 	}
 	public String toString() {
-		return "Employee [name =" + getName() +", age = " + getAge() + ", subject = " + getSubject() + "]";
+		return "Professor [name =" + getName() +", age = " + getAge() + ", subject = " + getSubject() + "]";
 	}	
 
 }

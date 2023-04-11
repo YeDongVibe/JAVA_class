@@ -16,6 +16,11 @@ public class Person {
 //			
 //			System.out.println(p);
 //		}
+		
+		public Person(String name, int age) {
+			this.name = name;
+			this.age = age;
+		}
 
 		public String getName() {
 			return name;

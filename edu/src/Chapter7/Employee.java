@@ -7,6 +7,12 @@ public class Employee extends Person {
 		System.out.println("Employee 생성자가 호출됨");
 		
 	}
+	public Employee(String name, int age, String dept) { //생성자 호출
+		super(name, age);//부모 클래스(Person)에서 호출 : 이렇게 호출하는것이 가장 일반적인 방법.
+		//setName(name);
+		//setAge(age);
+		this.dept = dept;
+	}
 
 	public String getDept() {
 		return dept;
