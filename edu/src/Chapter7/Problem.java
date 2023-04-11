@@ -7,7 +7,7 @@ public class Problem {
 	public static void main(String[] args) {
 		int sum = 0;
 		int sum1 = 0;
-		int totalsum = 0;
+		//int totalsum = 0;
 		
 		for(int i = 1; i <1001; i++) {
 //			totalsum += i; 
