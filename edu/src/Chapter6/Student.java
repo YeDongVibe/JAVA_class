@@ -5,7 +5,7 @@ public class Student { // class의 이름의 첫글자는 대문자, 함수는 �
 	private String name;
 	private String dept;
 	public Student() {} //default(자동생성하는 값) 생산자
-	public Student(int sid, String name, String dept) {
+	public Student(int sid, String name, String dept) { //생성자 오버로딩 : 생성자를 여러개 만드는것, 이렇게 하면 디폴트 생성자를 넣어주지않음. 만약 생성자를 넣어주고 싶으면 디폴트생성자를 만들어줘야함.
 		this.sid = sid; //this = 키워드 : receiver object(수신 객체)
 		this.name = name;
 		this.dept = dept;
