@@ -1,6 +1,6 @@
-package Problem;
+package Problem01;
 
-import Problem.Student;
+import Problem01.Student;
 
 public class Student {
 		static int countStudents;
