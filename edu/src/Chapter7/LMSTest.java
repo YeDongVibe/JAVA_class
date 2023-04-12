@@ -1,5 +1,6 @@
 package Chapter7;
 
+
 public class LMSTest{
 	public static void main(String[] args) {
 		
@@ -18,7 +19,7 @@ public class LMSTest{
 
 		//p.setName("김푸름");
 		//p.setAge(52);
-		//p.setSubject("빅데이터");
+		//p.setSubject("빅데이터");  
 
 		//s.setName("김유빈");
 		//s.setAge(20);
