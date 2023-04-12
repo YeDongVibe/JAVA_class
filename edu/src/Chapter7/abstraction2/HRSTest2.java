@@ -32,9 +32,8 @@ class Salesman extends Employee {
 }
 
 class Consultant extends Employee {
-	public Consultant(String name, int salary) {
+	public Consultant(String name, int salary, int sale) {
 		super(name, salary);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void calcSalary() {
@@ -71,7 +70,7 @@ class Director extends Manager { //매니저로부터(부모클래스) 상속받
 public class HRSTest2 {
 	public static void main(String[] args) {//추상클래스가 아니라 일반클래스라 인스턴스 선언 가능.
 		Salesman s = new Salesman("Slaesman", 100, 0);
-		Consultant c = new Consultant("Consultant", 0);
+		Consultant c = new Consultant("Consultant", 0, 0);
 		Director d = new Director("Director", 0, 0);
 		
 		s.calcSalary();
