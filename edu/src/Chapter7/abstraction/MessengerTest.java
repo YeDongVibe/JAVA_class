@@ -3,7 +3,6 @@ package Chapter7.abstraction;
 public class MessengerTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		IPhoneMessenger iphone = new IPhoneMessenger();
 		GalaxyMessenger galaxy = new GalaxyMessenger();
