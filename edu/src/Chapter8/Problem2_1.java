@@ -12,14 +12,30 @@ public class Problem2_1 {
 		int rem = 0;
 		int max = 0;
 		int min = 0;
-		
-		if(num1 < num2) {
+
+		if (num1 < num2) {
 			max = num2;
 			min = num1;
 		} else {
 			max = num1;
 			min = num2;
+
+			rem = max % min;
+			System.out.println("최대공약수는 " + (rem));
+			System.out.println("최소공배수는 " + ((max * min) / rem));
 		}
+
+		while (rem != 0) {
+			rem = max % min;
+			max = min;
+			min = rem;
+
+			if (rem == 0) {
+				break;
+			}
+		}
+		System.out.println("최대공약수는 " + (rem));
+		System.out.println("최소공배수는 " + ((max * min) / rem));
 		sc.close();
 	}
 }
