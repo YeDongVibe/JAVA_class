@@ -20,9 +20,11 @@ public class Problem4 {
 			res = res-5*(res % 5);
 		}
 		else if (res>3) {
+			res = res + res / 5;
 			res = res- 3*(res % 3);
 		}
 		else {
+			res = res + res / 3;
 			res = res - 2*(res % 2);
 		}
 		
