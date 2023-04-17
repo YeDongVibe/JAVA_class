@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Test01 {
 	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> list = new ArrayList<String>(); //String을 generic Type이라고 함. String은 매게변수이다. 
 		list.add("서울");
 		list.add("북경");
 		list.add("상해");
