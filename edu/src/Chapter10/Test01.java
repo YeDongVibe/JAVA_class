@@ -49,8 +49,8 @@ public class Test01 {
 
 		// <T> T[] toArray(T[] a)
 		String cities[] = new String[0];
-		cities = list.toArray(cities);
-		System.out.println("9 : " + Arrays.toString(cities));
+		cities = list.toArray(cities); //리스트를 배열로 바꾸기.
+		System.out.println("9 : " + Arrays.toString(cities)); //Arrays.toString() : 배열에 사용한 것을 출력
 
 		// void clear()
 		list.clear();
@@ -64,7 +64,7 @@ public class Test01 {
 		list.add("LA");
 
 		// Arrays 클래스의 static <T> List<T> asList(T... a)
-		List<String> list2 = Arrays.asList("서울", "뉴욕", "상해");
+		List<String> list2 = Arrays.asList("서울", "뉴욕", "상해"); // Arrays.asList : 배열을 리스트로 바꾸기.
 		print(12, list2);
 
 		// boolean addAll(Collection<? extends E> c)
