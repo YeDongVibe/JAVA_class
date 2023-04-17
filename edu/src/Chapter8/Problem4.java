@@ -7,20 +7,20 @@ public class Problem4 {
 		Scanner sc = new Scanner(System.in);
 
 		int num = 0;
-		int a = 0;
-		int b = 0;
-		int c = 0;
-		int[] res = new int [3];
+		int e = 1;
+		int s = 1;
+		int oh = 1;
+		int res = 0;
 		
 		System.out.println("숫자를 입력하세요");
 		num = sc.nextInt();
-		a=2;
-		b=3;
-		c=5;
+		res = num - (2+3+5);
 		
-		num = a+b+c;
-		res = arr[a][b][c];
+		if (res> 5) {
+			res = res % 5;
+		}
 		
+	
 		System.out.println(Integer.toBinaryString(num));
 		sc.close();
 
