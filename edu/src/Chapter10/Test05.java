@@ -18,7 +18,7 @@ public class Test05 {
 		}
 
 		list.add(1, "LA");
-		print(1, list);
+		print(1, list); //객체없이 실행하기 위헤 static으로 선언 (t.print 이런식으로)
 		list.addFirst("런던");
 		print(2, list);
 		list.addLast("서울");
@@ -62,10 +62,12 @@ public class Test05 {
 		list.remove("LA");
 		print(23, list);
 
-		List<String> list2 = Arrays.asList("북경", "상해");
+		//-------------------------------------------------------------------------
+		
+		List<String> list2 = Arrays.asList("북경", "상해");//list를 만들어 출력
 		list.addAll(list2);
 
-		Object obj[] = list.toArray();
+		Object obj[] = list.toArray(); //object는 모든것의 root.
 		System.out.println("24 : " + Arrays.toString(obj));
 
 		String cities[] = new String[0];
