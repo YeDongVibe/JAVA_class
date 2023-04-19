@@ -16,6 +16,7 @@ public class matrix_sum {
 				// System.out.println(arr1[i][j]); //i=0 일때 j = 0,1,2로 돔 : 그래서 1,2,3이 출력 이후 반복.
 				// 행렬 모양으로 출력 위해 가로로 출력
 				System.out.print(arr1[i][j] + "\t");
+				
 			}
 			// 행렬 모양으로 출력
 			System.out.println("\n");
@@ -32,6 +33,7 @@ public class matrix_sum {
 				// System.out.println(arr1[i][j]); //i=0 일때 j = 0,1,2로 돔 : 그래서 1,2,3이 출력 이후 반복.
 				// 행렬 모양으로 출력 위해 가로로 출력
 				System.out.print(arr2[i][j] + "\t");
+				
 			}
 			// 행렬 모양으로 출력
 			System.out.println("\n");

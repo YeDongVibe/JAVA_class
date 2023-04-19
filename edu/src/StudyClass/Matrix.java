@@ -17,6 +17,7 @@ public class Matrix {
 				//행렬 모양으로 출력 위해 가로로 출력
 				System.out.print(arr1[i][j]+ "\t");
 		}
+			
 			//행렬 모양으로 출력
 			System.out.println("\n");
 		
@@ -33,6 +34,7 @@ public class Matrix {
 				//행렬 모양으로 출력 위해 가로로 출력
 				System.out.print(arr2[i][j]+ "\t");
 		}
+			
 			//행렬 모양으로 출력
 			System.out.println("\n");
 		
