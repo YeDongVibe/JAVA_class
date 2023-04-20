@@ -41,7 +41,7 @@ public class Block {
 	}
 
 	@Override
-	public String toString() { //이걸 왜한건지 이해가 되지않으니 내일 여쭈어봐야겠담.....7장이후 내용한대용
+	public String toString() { //이걸 왜한건지 이해가 되지않으니 내일 여쭈어봐야겠담.....7장이후 내용한대용 아직도모르겠다;; 출력형식때문에 씀.안쓰면 해시코드가 나옴.
 		String msg = "color = " + this.color + ", shape = " + this.shape + ", rotation = " + this.rotation + ", xPos = "
 				+ this.xPos + ", yPos = " + this.yPos;
 		return msg;
