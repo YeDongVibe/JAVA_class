@@ -1,33 +1,43 @@
 package Chapter13;
 
-class Book {
+class Book /* extends Object 없어도 알아서 컴파일링 해줌 */ {
    String name;
 }
 
 class Pencil {
    String name;
 }
-/*
- * class Bag { Book book; Pencil pencil; }
- */
 
-//Generic 클라스 p.614
-class Bag<T> {
-   T item;
+class Note {
+   String name;
+}
 
-   public Bag(T thing) {
-      item = thing;
+class Bag {
+   Object thing;
+
+   public Bag(Object thing) {
+      this.thing = thing;
    }
-   public T getThing() {
-      return item;
+
+   public Object getThing() {
+      return thing;
    }
+   public T getThing () {return item;}
 }
 
 public class BagPractice {
+
    public static void main(String[] args) {
-      // Bag b = new Bag<>();
-      Bag<Book> b = new Bag<Book>(new Book());
-      Bag<Pencil> p = new Bag<Pencil>(new Pencil());
-      Book book = b.getThing();                                                                                                                   
+	  Bag<Book> b = new Bag<Book>(new Book());
+	  Bag<Pencil> p = new Bag<Pencil>(new Pencil());
+	  Book book = b.getThing();
+//      Bag bag = new Bag(new Book()); // Book 객체를 전달해서 만들었음(new Book())
+//      Bag bag2 = new Bag(new Pencil());
+//      Bag bag3 = new Bag(new Note());
+//      Book book = (Book)bag.getThing(); //(Book)->타입캐스팅!!
+      //bag = bag2; //오류발생 놉. But 심각한 논리적 오류임
+      bag = p;
+
    }
+
 }
