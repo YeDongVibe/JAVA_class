@@ -16,13 +16,13 @@ public class WildCardTest {
 
 		double isum = sum(iList);
 		double dsum = sum(dList);
-		// sum(sList); //오류 발생
+		//double ssum = sum(sList); //iList는 int이기에, 오류 발생. String은 안된다. 
 
 		System.out.println("inum의 합계 : " + isum);
 		System.out.println("dnum의 합계 : " + dsum);
 	}
 
-	public static double sum(List<? extends Number> list) {
+	public static double sum(List<? extends Number> list) { //숫자들의 상위클래스가 Number임
 		double total = 0;
 		for (Number v : list) {
 			total += v.doubleValue();
