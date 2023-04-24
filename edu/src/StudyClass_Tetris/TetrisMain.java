@@ -68,7 +68,7 @@ public class TetrisMain implements Runnable {
 
 			// 1초를 쉬도록 하는 코드
 			try {
-				Thread.sleep(1000); // try~catch문을 필수로 써야함. / Thread.sleep(숫자) : 숫자만큼 쉬기.
+				Thread.sleep(250); // try~catch문을 필수로 써야함. / Thread.sleep(숫자) : 숫자만큼 쉬기.
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
