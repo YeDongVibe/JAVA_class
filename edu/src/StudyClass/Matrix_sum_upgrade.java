@@ -8,7 +8,7 @@ public class Matrix_sum_upgrade {
 		int[][] arr2 = new int[][] { { 11, 12, 13 }, { 14, 15, 16 }, { 17, 18, 19 } };
 
 		System.out.println("arr1 출력 : ");
-		ShowMatrix(arr1); //선언한 함수를 가져와 출력.
+		ShowMatrix(arr1); // 선언한 함수를 가져와 출력.
 		System.out.println("arr2 출력 : ");
 		ShowMatrix(arr2);
 		System.out.println("arr3 = arr1 + arr2 : ");
@@ -16,6 +16,7 @@ public class Matrix_sum_upgrade {
 		ShowMatrix(arr3);
 		System.out.println("arr3 출력 : ");
 		ShowMatrix(arr3);
+
 	}
 
 	static void ShowMatrix(int[][] m) { // 행렬 출력을 위한 함수 만들기 : return타입이 없으므로 void로 선언.
@@ -27,7 +28,7 @@ public class Matrix_sum_upgrade {
 				// System.out.println(arr1[i][j]); //i=0 일때 j = 0,1,2로 돔 : 그래서 1,2,3이 출력 이후 반복.
 				// 행렬 모양으로 출력 위해 가로로 출력
 				System.out.print(m[i][j] + "\t"); // m을 받아 출력.
-				
+
 			}
 			// 행렬 모양으로 출력
 			System.out.println("\n");
