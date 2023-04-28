@@ -13,6 +13,9 @@ public class TestMain3 {
 		System.out.println("toString을 직접 명시 : " + s);
 		System.out.println("toString을 직접 명시 다른 방법 : " + a.toString());
 		
+		//abstract는 new ~~이걸로 선언 불가.
+		//abstractUnit u = new abstractUnit();
+		
 		//Interfaceunit2의 유닛을 받아 배열 생성.
 		ArrayList<Interfaceunit2> unitArray = new ArrayList<Interfaceunit2>();
 
