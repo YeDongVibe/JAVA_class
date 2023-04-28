@@ -1,6 +1,6 @@
 package Study7_8jang3;
 
-public abstract class abstractUnit {
+public abstract class abstractUnit{
 	//abstract는 다중상속이 불가하다.
 	//abstract를 상속받는 class는 반드시 상위클래스의 매서드를 구현해야함.
 	abstract void run();
