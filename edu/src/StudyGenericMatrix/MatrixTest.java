@@ -5,6 +5,7 @@ public class MatrixTest {
     public static void main(String[] args) {
 
         // 2행 3열의 Integer 타입 행렬을 랜덤으로 생성
+    	// 각각의 Type을 명시해줘야함.
         Matrix<Integer> im1 = new Matrix<Integer>(2, 3, Integer.class);
         im1.showData();
         Matrix<Integer> im2 = new Matrix<Integer>(2, 3, Integer.class);

@@ -4,6 +4,8 @@ package StudyGenericMatrix;
 import java.lang.reflect.Array;
 import java.util.Random;
 
+// 사용자가 만든 함수에는 try-catch문을 써주는 것이 좋음. 그래야지 오류 발생시 참고하기 용이함. 예는 showData를 참고하도록.
+//Number라는 상위클래스의 내용을 integer, double, float, long이 상속받음
 public class Matrix<T extends Number> {
 
     private int rows;
@@ -83,8 +85,12 @@ public class Matrix<T extends Number> {
      */
     private void setData() {
         Random rand = new Random(System.currentTimeMillis());
+        
+        //타입에서 소문자는 객체의 type을 지정해주는 것이고, 대문자는 class로 지정하여 변호나
 
         // generic 배열은 this.data = new T[this.rows][this.cols] 로 생성 불가능
+        // 그래서 newInstance라는 것을 이용해 생성해야함.
+        // T : type, [] : rows, [] : cols 순서대로 해당하는 것
         this.data = (T[][]) Array.newInstance(this.type, this.rows, this.cols);
 
         for (int r = 0; r < this.rows; r++) { // 행의 개수
@@ -95,9 +101,12 @@ public class Matrix<T extends Number> {
                     // Math.sqrt(Integer.MAX_VALUE) 를 Double 타입으로 캐스팅한 후
                     // intValue() 메소드를 사용해 다시 int 타입으로 캐스팅한다.
                     // int 타입은 Integer 타입으로 자동으로 변환됨.
+                	
+                	// 제곱근은 integer로 나오지 않을 수 있어서 intValue를 통해 변환해줌
                     Integer sqrtMax = ((Double) Math.sqrt(Integer.MAX_VALUE)).intValue();
                     // int 타입을 반환하는 rand.nextInt() 결과를 Integer 로 변환후 다시 T 타입으로 변환
                     data[r][c] = (T) Integer.valueOf(rand.nextInt(sqrtMax));
+                    
                 } else if (this.type == Double.class) {
                     // sqrtMax 는 Double 이 가질수 있는 최대값의 제곱근.
                     // Math.sqrt() 는 double 형으로 결과를 반환하기 때문에
@@ -105,6 +114,7 @@ public class Matrix<T extends Number> {
                     Double sqrtMax = Math.sqrt(Double.MAX_VALUE);
                     // double 타입을 반환하는 rand.nextDouble() 결과를 Double 로 변환후 다시 T 타입으로 변환
                     data[r][c] = (T) Double.valueOf(rand.nextDouble(sqrtMax));
+                    
                 } else if (this.type == Long.class) {
                     // sqrtMax 는 Long 이 가질수 있는 최대값의 제곱근.
                     // Math.sqrt() 는 double 형으로 결과를 반환하기 때문에
@@ -125,15 +135,20 @@ public class Matrix<T extends Number> {
      * 각각의 원소를 행과 열에 맞춰 출력한다.
      */
     protected void showData() {
-        // 이 객체의 generic 타입을 출력
-        System.out.println("- " + this.type.getSimpleName() + " 타입 행렬의 데이터");
-        for (int i = 0; i < this.rows; i++) { // 행의 개수
-            for (int j = 0; j < this.cols; j++) { // 열의 개수
-                System.out.print(this.data[i][j] + "\t");
+    	try {
+            // 이 객체의 generic 타입을 출력
+            System.out.println("- " + this.type.getSimpleName() + " 타입 행렬의 데이터");
+            for (int i = 0; i < this.rows; i++) { // 행의 개수
+                for (int j = 0; j < this.cols; j++) { // 열의 개수
+                    System.out.print(this.data[i][j] + "\t");
+                }
+                System.out.println();
             }
             System.out.println();
-        }
-        System.out.println();
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
     } // protected void showData()
 
     /**
@@ -150,10 +165,12 @@ public class Matrix<T extends Number> {
                     // this.data[r][c] 와 m.data[r][c] 을 Integer 형으로 캐스팅한 뒤 더하고
                     // 그 결과를 다시 Number 형으로 변환한 후 T 형으로 변환해 this.data[r][c] 에 값을 대입한다.
                     this.data[r][c] = (T) (Number) ((Integer) this.data[r][c] + (Integer) m.data[r][c]);
+                    
                 } else if (this.type == Double.class) {
                     // this.data[r][c] 와 m.data[r][c] 을 Double 형으로 캐스팅한 뒤 더하고
                     // 그 결과를 다시 Number 형으로 변환한 후 T 형으로 변환해 this.data[r][c] 에 값을 대입한다.
                     this.data[r][c] = (T) (Number) ((Double) this.data[r][c] + (Double) m.data[r][c]);
+                    
                 } else if (this.type == Long.class) {
                     // this.data[r][c] 와 m.data[r][c] 을 Long 형으로 캐스팅한 뒤 더하고
                     // 그 결과를 다시 Number 형으로 변환한 후 T 형으로 변환해 this.data[r][c] 에 값을 대입한다.
